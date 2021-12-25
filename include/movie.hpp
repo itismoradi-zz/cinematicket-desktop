@@ -21,7 +21,7 @@ public:
     
     void addToStars();
 
-protected:
+private:
     int releaseDate;
     int numberOfStars = 0;
     int movieId;
