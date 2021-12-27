@@ -18,7 +18,7 @@ void Movie::setMovieName(QString name)
 }
 void Movie::setGenre(QString gnr)
 {
-    genre = gnr;
+    genre[1] = gnr;
 }
 void Movie::setCast(QString name)
 {
@@ -55,11 +55,11 @@ QString Movie::getMovieName()
 }
 QString Movie::getGenre()
 {
-    return genre;
+    return genre[0];
 }
 QString Movie::getCast()
 {
-    return cast;
+    return cast[1];
 }
 
 void Movie::addToStars()

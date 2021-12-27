@@ -2,7 +2,7 @@
 
 void Wallet::increaseCredit(int amount)
 {
-    credit = credit+= + amount;
+    credit = credit + amount;
 }
 void Wallet::setUserName(QString name)
 {

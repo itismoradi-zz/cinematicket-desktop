@@ -1,6 +1,8 @@
 #ifndef WALLET_H
 #define WALLET_H
 
+#include <QString>
+
 class Wallet
 {
 public:

@@ -29,7 +29,7 @@ private:
     int movieId;
     QString directorName;
     QString movieName;
-    QString genre[3];   // each movie can have 3 genres
+    QString genre[3];   // must change to QVector
     QString cast[20];   // each movie has 20 actor or actress or less
 
     int numOfGenres = 0;

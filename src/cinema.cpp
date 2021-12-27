@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void Cinema::setName(Qstring name)
+void Cinema::setName(QString name)
 {
     cinemaName=name;
 }
@@ -11,11 +11,11 @@ void Cinema::setCap(int cap)
 {
     cinemaCapacity=cap;
 }
-void Cinema::setCity(Qstring city)
+void Cinema::setCity(QString city)
 {
     cinemaCity=city;
 }
-void Cinema::setStreet(Qstring street)
+void Cinema::setStreet(QString street)
 {
     cinemaStreet=street;
 }
@@ -23,7 +23,7 @@ void Cinema::setId(int id)
 {
     cinemaId=id;
 }
-Qstring Cinema::getName(void)
+QString Cinema::getName(void)
 {
     return cinemaName;
 }
@@ -31,11 +31,11 @@ int Cinema::getCap(void)
 {
     return cinemaCapacity;
 }
-Qstring Cinema::getCity(void);
+QString Cinema::getCity(void)
 {
     return cinemaCity;
 }
-Qstring Cinema::getStreet(void)
+QString Cinema::getStreet(void)
 {
     return cinemaStreet;
 }

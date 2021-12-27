@@ -1,27 +1,29 @@
 #ifndef CINEMA_H
 #define CINEMA_H
 
+#include <QString>
+
 class Cinema
 {
 private:
-    Qstring cinemaName;
+    QString cinemaName;
     int cinemaCapacity;
-    Qstring cinemaCity;
-    Qstring cinemaStreet;
+    QString cinemaCity;
+    QString cinemaStreet;
     int cinemaId;
 
 public:
 
     Cinema(/* args */);
-    void setName(Qstring);
+    void setName(QString);
     void setCap(int);
-    void setCity(Qstring);
-    void setStreet(Qstring);
+    void setCity(QString);
+    void setStreet(QString);
     void setId(int);
-    Qstring getName(void);
+    QString getName(void);
     int getCap(void);
-    Qstring getCity(void);
-    Qstring getStreet(void);
+    QString getCity(void);
+    QString getStreet(void);
     int getId(void);
 
     ~Cinema();
