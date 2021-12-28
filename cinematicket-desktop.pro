@@ -1,3 +1,4 @@
+INCLUDEPATH += include
 HEADERS += \
         include/account.hpp \
         include/cinema.hpp \
