@@ -3,6 +3,7 @@
 
 #include <QString>
 #include <QVector>
+#include "wallet.hpp"
 
 class ACCOUNT
 {
@@ -21,6 +22,7 @@ private:
     QString username_;
     QString password_;  //should be saved as a hash
     QVector <QString> oldPasswords_;     //old used passwords can't be used as new password
+    Wallet wallet;
 };
 
 #endif

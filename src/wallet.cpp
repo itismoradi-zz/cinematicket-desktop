@@ -1,28 +1,48 @@
-#include "../include/wallet.hpp"
+#include "wallet.hpp"
 
-void Wallet::increaseCredit(int amount)
+Wallet::Wallet()
 {
-    credit = credit + amount;
-}
-void Wallet::setUserName(QString name)
-{
-    userName = name;
+    credit_ = 0;
 }
 
-int Wallet::getCredit()
+bool Wallet::charge(unsigned int amount)
 {
-    return credit;
-}
-QString Wallet::getUserName()
-{
-    return userName;
+    credit_ += amount;
+
+    Statement statement;
+    statement.operationType = OperationType::CHARGE;
+    statement.operationNumber = amount;
+    statement.credit = credit_;
+    //set dateTime to system dateTime
+    statement_.push_back(statement);
+
+    return true;
 }
 
-bool Wallet::withdraw(int amount)
+int Wallet::Credit()
 {
-    if (amount >= credit)   // checks if user have enough credit
+    Statement statement;
+    statement.operationType = OperationType::CHECK;
+    statement.operationNumber = 0;
+    statement.credit = credit_;
+    //set dateTime to system dateTime
+    statement_.push_back(statement);
+    return credit_;
+}
+
+bool Wallet::withdraw(unsigned int amount)
+{
+    if (amount >= credit_)   // checks if user have enough credit
     {
-        credit = credit - amount;
+        credit_ -= amount;
+
+        Statement statement;
+        statement.operationType = OperationType::WITHDRAW;
+        statement.operationNumber = amount;
+        statement.credit = credit_;
+        //set dateTime to system dateTime
+        statement_.push_back(statement);
+
         return true;
     }
     else

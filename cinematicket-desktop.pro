@@ -1,3 +1,5 @@
+QT += core
+
 INCLUDEPATH += include
 HEADERS += \
         include/account.hpp \
