@@ -4,35 +4,26 @@ void Movie::setReleaseDate(int date)
 {
     releaseDate = date;
 }
-void Movie::setMovieId(int id)
+void Movie::setId(int id)
 {
-    movieId = id;
+    Id = id;
 }
 void Movie::setDirectorName(QString name)
 {
     directorName = name;
 }
-void Movie::setMovieName(QString name)
+void Movie::setName(QString movieName)
 {
-    movieName = name;
+    name = movieName;
 }
 void Movie::setGenre(QString gnr)
 {
-    genre[1] = gnr;
+    movieGenres.push_front(gnr);
 }
-void Movie::setCast(QString name)
+void Movie::setCast(QString name)   // adds a new cast to vector
 {
-    if (numOfCast < 20)
-    {
-        cast[numOfCast] = name;
-        numOfCast++;
-    }
-    else
-    {
-        throw(false);
-    }
+    cast.push_front(name);
 }
-
 int Movie::getReleaseDate()
 {
     return releaseDate;
@@ -41,25 +32,25 @@ int Movie::getNumberOfStars()
 {
     return numberOfStars;
 }
-int Movie::getMovieId()
+int Movie::getId()
 {
-    return movieId;
+    return Id;
 }
 QString Movie::getDirectorName()
 {
     return directorName;
 }
-QString Movie::getMovieName()
+QString Movie::getName()
 {
-    return movieName;
+    return name;
 }
-QString Movie::getGenre()
+const QVector<QString> Movie::getGenre()
 {
-    return genre[0];
+    return movieGenres;
 }
-QString Movie::getCast()
+const QVector<QString> Movie::getCast()
 {
-    return cast[1];
+    return cast;
 }
 
 void Movie::addToStars()

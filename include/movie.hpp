@@ -2,39 +2,37 @@
 #define MOVIE_H
 
 #include <QString>
+#include <QVector>
 
 class Movie
 {
 public:
     void setReleaseDate(int);
-    void setMovieId(int);
+    void setId(int);
     void setDirectorName(QString);
-    void setMovieName(QString);
+    void setName(QString);
     void setGenre(QString);
     void setCast(QString);
 
     int getReleaseDate();
     int getNumberOfStars();
-    int getMovieId();
+    int getId();
     QString getDirectorName();
-    QString getMovieName();
-    QString getGenre();
-    QString getCast();
-    
+    QString getName();
+    const QVector<QString> getCast();
+    const QVector<QString> getGenre();
+
     void addToStars();
 
 private:
     int releaseDate;
     int numberOfStars = 0;
-    int movieId;
+    int Id;
     QString directorName;
-    QString movieName;
-    QString genre[3];   // must change to QVector
-    QString cast[20];   // each movie has 20 actor or actress or less
-
-    int numOfGenres = 0;
-    int numOfCast= 0;
-
+    QString name;
+    QString genres[5] = {"comedy", "drama", "action", "romance", "documentry"};   // genres a movie can have
+    QVector <QString> movieGenres;
+    QVector <QString> cast;
 };
 
 #endif // MOVIE_H
