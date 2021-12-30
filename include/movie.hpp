@@ -19,8 +19,8 @@ public:
     int getId();
     QString getDirectorName();
     QString getName();
-    const QVector&<QString> getCast();
-    const QVector&<QString> getGenre();
+    const QVector<QString>& getCast();
+    const QVector<QString>& getGenre();
 
     void addToStars();
 

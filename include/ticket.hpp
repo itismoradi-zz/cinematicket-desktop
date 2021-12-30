@@ -1,6 +1,10 @@
 #ifndef TICKET_H
 #define TICKET_H
 
+#include "cinema.hpp"
+#include "date.hpp"
+#include "movie.hpp"
+
 class Ticket
 {
 public:
@@ -14,11 +18,14 @@ public:
     int getTicketId();
     bool getIsReturned();
 
-protected:
+private:
     int price;
     int seatNumber;
     int ticketId = 0;   // if user bought a ticket, id will change else it will remain zero
     bool isReturned = false;    // if user bought a ticket and wants to return it, value of isReturned will be true
+    Cinema cinema;
+    Date date;
+    Movie movie;
 };
 
 #endif // TICKET_H

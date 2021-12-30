@@ -1,44 +1,94 @@
 #include "account.hpp"
 
-ACCOUNT::ACCOUNT(QString username, QString password)
+Account::Account(QString username, QString password)
 {
     changeUsername(username);
     changePassword(password);
 }
 
-bool ACCOUNT::changeUsername(QString username)
+Account::Account(QString username, QString password, QString name, QString email, QString phoneNumber) // user wants to log in
 {
-    if(username.isEmpty())
+    changeUsername(username);
+    changePassword(password);
+    setName(name);
+    setEmail(email);
+    setPhoneNumber(phoneNumber);
+}
+
+bool Account::setName(QString name) // name can not have more than 20 characters
+{
+    if (name.length() == 0 || 20 < name.length())
+    {
+        return false;
+    }
+    else
+    {
+        name_ = name;
+        return true;
+    }
+}
+
+void Account::setEmail(QString email)
+{
+    email_ = email;
+}
+
+void Account::setPhoneNumber(QString phoneNumber)
+{
+    phoneNumber_ = phoneNumber;
+}
+
+QString Account::name()
+{
+    return name_;
+}
+
+QString Account::email()
+{
+    return email_;
+}
+
+QString Account::phoneNumber()
+{
+    return phoneNumber_;
+}
+
+bool Account::changeUsername(QString username)
+{
+    if (username.isEmpty())
     {
         return false;
     }
 
-//    if()   //زheck the database for unique username
-//    {
-//        return false;
-//    }
+    //    if()   //زheck the database for unique username
+    //    {
+    //        return false;
+    //    }
 
     username_ = username;
     return true;
 }
 
-QString ACCOUNT::username()
+QString Account::username()
 {
     return username_;
 }
 
-bool ACCOUNT::changePassword(QString password)
+bool Account::changePassword(QString password) 
 {
-    if(password.isEmpty())
+    if (password.isEmpty())
     {
         return false;
     }
-
-    for(QString s : oldPasswords_)
+    else if (password.length() <= 3 || 20 <= password.length()) // number of password characters should be betweeen 3 to 20 characters
     {
-        if(s == password)
+        return false;
+    }
+    for (QString s : oldPasswords_)
+    {
+        if (s == password)
         {
-            return false;   //the new password must not have been used before
+            return false; // the new password must not have been used before
         }
     }
 

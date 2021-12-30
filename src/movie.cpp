@@ -19,7 +19,7 @@ void Movie::setName(QString movieName)
 bool Movie::setGenre(QString gnr)
 {
     gnr = gnr.toLower();
-    if (gnr == "comedy" || gnr == "drama" || gnr == "documentry" || gnr == "romantic" || gne == "action")
+    if (gnr == "comedy" || gnr == "drama" || gnr == "documentry" || gnr == "romantic" || gnr == "action")
     {
         movieGenres.push_front(gnr);
         return true;
@@ -50,11 +50,11 @@ QString Movie::getName()
 {
     return name;
 }
-const QVector &<QString> Movie::getGenre()
+const QVector<QString>& Movie::getGenre()
 {
     return movieGenres;
 }
-const QVector &<QString> Movie::getCast()
+const QVector<QString>& Movie::getCast()
 {
     return cast;
 }
