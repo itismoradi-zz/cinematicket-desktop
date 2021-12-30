@@ -5,11 +5,18 @@ using namespace std;
 
 void Cinema::setName(QString name)
 {
-    cinemaName=name;
+    for(int i=0;i<=name.length();i++)
+    {
+        QChar ch=name[i];
+        if((ch>=97 && ch<=122) || (ch>=65 && ch<=90))
+            cinemaName=name;
+
+    }
 }
 void Cinema::setCap(int cap)
 {
-    cinemaCapacity=cap;
+    if(cap > 0)
+     cinemaCapacity=cap;
 }
 void Cinema::setCity(QString city)
 {
@@ -21,7 +28,7 @@ void Cinema::setStreet(QString street)
 }
 void Cinema::setId(int id)
 {
-    cinemaId=id;
+   cinemaId=id;
 }
 QString Cinema::getName(void)
 {
