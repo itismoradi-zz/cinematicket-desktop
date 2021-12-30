@@ -16,11 +16,17 @@ void Movie::setName(QString movieName)
 {
     name = movieName;
 }
-void Movie::setGenre(QString gnr)
+bool Movie::setGenre(QString gnr)
 {
-    movieGenres.push_front(gnr);
+    gnr = gnr.toLower();
+    if (gnr == "comedy" || gnr == "drama" || gnr == "documentry" || gnr == "romantic" || gne == "action")
+    {
+        movieGenres.push_front(gnr);
+        return true;
+    }
+    return false;
 }
-void Movie::setCast(QString name)   // adds a new cast to vector
+void Movie::setCast(QString name) // adds a new cast to vector
 {
     cast.push_front(name);
 }
@@ -44,11 +50,11 @@ QString Movie::getName()
 {
     return name;
 }
-const QVector<QString> Movie::getGenre()
+const QVector &<QString> Movie::getGenre()
 {
     return movieGenres;
 }
-const QVector<QString> Movie::getCast()
+const QVector &<QString> Movie::getCast()
 {
     return cast;
 }
