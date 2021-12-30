@@ -10,19 +10,23 @@ void Date::setId(int id)
 }
 void Date::setDate(int date)
 {
-    dateDate=date;
+    if(date>=1 && date<=31)
+        dateDate=date;
 }
 void Date::setMonth(int month)
 {
-    dateMonth=month;
+    if(month>=1 && month<=12)
+        dateMonth=month;
 }
 void Date::setYear(int year)
 {
-    dateYear=year;
+    if(year<=2022)
+        dateYear=year;
 }
 void Date::setHour(int hour)
 {
-    dateHour=hour;
+    if(hour>=1 && hour<=24)
+        dateHour=hour;
 }
 int Date::getId(void)
 {
