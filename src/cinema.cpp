@@ -1,56 +1,46 @@
 #include <iostream>
-#include "../include/cinema.hpp"
+#include "cinema.hpp"
 
 using namespace std;
 
 void Cinema::setName(QString name)
 {
-    bool check;
-    for(int i=0;i<=name.length();i++)
-    {
-        QChar ch=name[i];
-        if((ch>=97 && ch<=122) || (ch>=65 && ch<=90))
-            check=true;
-        else
-            check=false;
-    }
-    if(check==true)
-        cinemaName=name;
+    name_ = name;
 }
 void Cinema::setCap(int cap)
 {
     if(cap > 0)
-       cinemaCapacity=cap;
+       capacity_ = cap;
 }
 void Cinema::setCity(QString city)
 {
-    cinemaCity=city;
+    city_ = city;
 }
 void Cinema::setStreet(QString street)
 {
-    cinemaStreet=street;
+    street_ = street;
 }
 void Cinema::setId(int id)
 {
-   cinemaId=id;
+   id_ = id;
 }
 QString Cinema::getName(void)
 {
-    return cinemaName;
+    return name_;
 }
 int Cinema::getCap(void)
 {
-    return cinemaCapacity;
+    return capacity_;
 }
 QString Cinema::getCity(void)
 {
-    return cinemaCity;
+    return city_;
 }
 QString Cinema::getStreet(void)
 {
-    return cinemaStreet;
+    return street_;
 }
 int Cinema::getId(void)
 {
-    return cinemaId;
+    return id_;
 }

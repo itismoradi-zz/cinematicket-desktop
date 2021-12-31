@@ -6,11 +6,11 @@
 class Cinema
 {
 private:
-    QString cinemaName;
-    int cinemaCapacity;
-    QString cinemaCity;
-    QString cinemaStreet;
-    int cinemaId;
+    QString name_;
+    int capacity_;
+    QString city_;
+    QString street_;
+    int id_;
 
 public:
 
