@@ -1,8 +1,11 @@
 //cinematicket desktop
 
-int main()
+#include "app.hpp"
+
+int main(int argc, char ** argv)
 {
-    return 0;
+    App app(argc, argv);
+    return app.run();
 }
 
 //DataBase course project
