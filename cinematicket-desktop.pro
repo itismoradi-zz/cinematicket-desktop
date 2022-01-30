@@ -13,24 +13,26 @@ TEMPLATE = app
 
 DEFINES += QT_DEPRECATED_WARNINGS
 
+INCLUDEPATH += include
+
 SOURCES += \
-        main.cpp \
-        login.cpp \
-    signup.cpp \
-    cinemamovie.cpp \
-    profile.cpp
+        src/main.cpp \
+        src/login.cpp \
+    	src/signup.cpp \
+    	src/cinemamovie.cpp \
+    	src/profile.cpp
 
 HEADERS += \
-        login.hpp \
-    signup.hpp \
-    cinemamovie.hpp \
-    profile.hpp
+        include/login.hpp \
+   	include/signup.hpp \
+    	include/cinemamovie.hpp \
+    	include/profile.hpp
 
 FORMS += \
-        login.ui \
-    signup.ui \
-    cinemamovie.ui \
-    profile.ui
+        form/login.ui \
+    	form/signup.ui \
+    	form/cinemamovie.ui \
+    	form/profile.ui
 
 RESOURCES += \
-    assets.qrc
+    	assets.qrc
