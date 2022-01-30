@@ -1,24 +1,36 @@
-QT += core gui
+#-------------------------------------------------
+#
+# Project created by QtCreator 2022-01-30T14:30:05
+#
+#-------------------------------------------------
 
-INCLUDEPATH += include/
-HEADERS += \
-        include/account.hpp \
-        include/app.hpp \
-        include/cinema.hpp \
-        include/date.hpp \
-        include/managerAccount.hpp \
-        include/movie.hpp \
-        include/ticket.hpp \
-        include/viewerAccount.hpp \
-        include/wallet.hpp
+QT       += core gui sql
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+TARGET = cinemaTicket
+TEMPLATE = app
+
+DEFINES += QT_DEPRECATED_WARNINGS
+
 SOURCES += \
-        src/app.cpp \
-        src/main.cpp \
-        src/account.cpp \
-        src/cinema.cpp \
-        src/date.cpp \
-        src/managerAccount.cpp \
-        src/movie.cpp \
-        src/ticket.cpp \
-        src/viewerAccount.cpp \
-        src/wallet.cpp
+        main.cpp \
+        login.cpp \
+    signup.cpp \
+    cinemamovie.cpp \
+    profile.cpp
+
+HEADERS += \
+        login.hpp \
+    signup.hpp \
+    cinemamovie.hpp \
+    profile.hpp
+
+FORMS += \
+        login.ui \
+    signup.ui \
+    cinemamovie.ui \
+    profile.ui
+
+RESOURCES += \
+    assets.qrc
