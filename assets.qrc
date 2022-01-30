@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>assets/cinematicket.png</file>
+        <file>assets/cinematicket-logo.png</file>
+        <file>assets/ii.jpg</file>
+        <file>assets/logo.png</file>
+        <file>assets/red.jpg</file>
+    </qresource>
+</RCC>
