@@ -10,7 +10,7 @@ login::login(QWidget *parent) :
 {
     ui->setupUi(this);
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/EEM/Desktop/cinemaTicket/cinemaTicket.db");
+    db.setDatabaseName("../cinemaTicket.db");
 
     if(db.open())
     {
@@ -88,6 +88,17 @@ void login::on_pushButton_clicked()
 
     username = ui->lineEdit_username->text();
     password = ui->lineEdit_password->text();
+
+    if(username.isEmpty())
+    {
+        ui->lbl_status->setText("شناسه کاربری خالی است");
+        return;
+    }
+    else if(password.isEmpty())
+    {
+        ui->lbl_status->setText("گذرواژه خالی است");
+        return;
+    }
 
     if(db.open())
     {

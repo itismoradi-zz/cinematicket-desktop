@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>پروفایل</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../assets.qrc">
+    <normaloff>:/new/prefix1/assets/logo.png</normaloff>:/new/prefix1/assets/logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(246, 246, 246);</string>
@@ -30,7 +34,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="assets.qrc">:/new/prefix1/assets/ii.jpg</pixmap>
+     <pixmap resource="../assets.qrc">:/new/prefix1/assets/ii.jpg</pixmap>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
@@ -198,20 +202,10 @@
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>598</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="assets.qrc"/>
+  <include location="../assets.qrc"/>
  </resources>
  <connections/>
 </ui>

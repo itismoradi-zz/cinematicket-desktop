@@ -2,6 +2,7 @@
 #include "ui_profile.h"
 #include <QSqlQuery>
 #include <string>
+#include <QDebug>
 
 Profile::Profile(QWidget *parent, QString id, QSqlDatabase * db, bool isManager) :
     QMainWindow(parent),
@@ -119,13 +120,13 @@ void Profile::on_pushButton_clicked()
     {
         while (q.next())
         {
-            chargeValue = q.value("credit").toInt();
+            chargeValue = static_cast<int>(q.value("credit").toInt());
             chargeValue += 20000;
         }
 
-        QSqlQuery qCharge("update wallet set credit = (:val) where userID = (:i);");
-        qCharge.bindValue(":val", chargeValue);
-        qCharge.bindValue(":i", ID);
+        QSqlQuery qCharge("update wallet set credit = (:val) where userID = "+ID+";");
+        QString val = QString::number(chargeValue);
+        qCharge.bindValue(":val", val);
 
         if(qCharge.exec())
         {

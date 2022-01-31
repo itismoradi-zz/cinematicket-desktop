@@ -7,33 +7,27 @@
     <x>0</x>
     <y>0</y>
     <width>875</width>
-    <height>579</height>
+    <height>643</height>
    </rect>
   </property>
   <property name="cursor">
    <cursorShape>ArrowCursor</cursorShape>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>صفحه اصلی</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../assets.qrc">
+    <normaloff>:/new/prefix1/assets/logo.png</normaloff>:/new/prefix1/assets/logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>875</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QWidget" name="centralwidget" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
+     <y>30</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -52,10 +46,10 @@
   <widget class="QPushButton" name="btn_profile">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>480</y>
-     <width>50</width>
-     <height>50</height>
+     <x>30</x>
+     <y>470</y>
+     <width>121</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
@@ -65,7 +59,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 20, 82);</string>
+background-color: rgb(130, 130, 130);</string>
    </property>
    <property name="text">
     <string>پروفایل</string>
@@ -74,9 +68,9 @@ background-color: rgb(255, 20, 82);</string>
   <widget class="QLabel" name="lbl_status">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>540</y>
-     <width>361</width>
+     <x>30</x>
+     <y>600</y>
+     <width>811</width>
      <height>21</height>
     </rect>
    </property>
@@ -84,14 +78,14 @@ background-color: rgb(255, 20, 82);</string>
     <string>وضعیت</string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>30</y>
+     <y>20</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -115,7 +109,7 @@ background-color: rgb(255, 20, 82);</string>
    <property name="geometry">
     <rect>
      <x>580</x>
-     <y>30</y>
+     <y>20</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -139,7 +133,7 @@ background-color: rgb(255, 20, 82);</string>
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>80</y>
+     <y>70</y>
      <width>371</width>
      <height>371</height>
     </rect>
@@ -157,7 +151,7 @@ background-color: rgb(255, 20, 82);</string>
    <property name="geometry">
     <rect>
      <x>460</x>
-     <y>80</y>
+     <y>70</y>
      <width>351</width>
      <height>371</height>
     </rect>
@@ -166,7 +160,223 @@ background-color: rgb(255, 20, 82);</string>
     <string notr="true">background-color: rgb(241, 241, 241);</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="btn_buyTicket">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>530</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 20, 82);</string>
+   </property>
+   <property name="text">
+    <string>خرید بلیت</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_Movie">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>543</y>
+     <width>133</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>540</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>انتخاب فیلم</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>500</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>انتخاب سینما</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_cinema">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>503</y>
+     <width>133</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>460</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>انتخاب سانس</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_date">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>464</y>
+     <width>133</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_search">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>463</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(130, 130, 130);</string>
+   </property>
+   <property name="text">
+    <string>جستوجو</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_seat">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>543</y>
+     <width>141</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>510</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>صندلی های موجود</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>470</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>قیمت (تومان)</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_price">
+   <property name="geometry">
+    <rect>
+     <x>206</x>
+     <y>520</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>17</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 15, 71);</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../assets.qrc"/>
+ </resources>
  <connections/>
 </ui>

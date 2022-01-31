@@ -23,7 +23,11 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>ثبت نام</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../assets.qrc">
+    <normaloff>:/new/prefix1/assets/logo.png</normaloff>:/new/prefix1/assets/logo.png</iconset>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
@@ -81,7 +85,7 @@ color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="assets.qrc">:/new/prefix1/assets/red.jpg</pixmap>
+    <pixmap resource="../assets.qrc">:/new/prefix1/assets/red.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -223,7 +227,7 @@ color: rgb(255, 255, 255);</string>
   <tabstop>pushButton</tabstop>
  </tabstops>
  <resources>
-  <include location="assets.qrc"/>
+  <include location="../assets.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -35,4 +35,4 @@ FORMS += \
     	form/profile.ui
 
 RESOURCES += \
-    	assets.qrc
+    	assets.qrc \
